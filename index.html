@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="kpc.js"></script>
+  </head>
+  <body>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Tab1')">1. Personal Details</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab2')">2. Institution Details</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab3')">3. Documents Upload</button>
+      </div>
+      
+      <div id="Tab1" class="tabcontent">
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+    
+          <label for="id">ID Number:</label>
+          <input type="text" id="id" name="id"><br><br>
+    
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone"><br><br>
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+
+          <label for="dob">Date of Birth:</label>
+		      <input type="text" id="dob" name="dob" onfocus="(this.type='date')" onblur="(this.type='text')"><br><br>
+    
+          <input type="submit" value="Proceed">
+        </form>
+      </div>
+      
+      <div id="Tab2" class="tabcontent">
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+          
+          <label for="institution">Institution Name:</label>
+          <input type="text" id="institution" name="institution"><br><br>
+          
+          <label for="course">Course Name:</label>
+          <input type="text" id="course" name="course"><br><br>
+
+          <label for="course-type">Course Type:</label>
+		      <select id="course-type" name="course-type">
+			       <option value="degree">Degree</option>
+			       <option value="diploma">Diploma</option>
+			       <option value="certificate">Certificate</option>
+		       </select><br><br>
+		
+	
+          
+          <input type="submit" value="Proceed">
+        </form>
+      </div>
+      
+      <div id="Tab3" class="tabcontent">
+        <h3>Tab 3 Content</h3>
+        <p>This is the content of Tab 3.</p>
+      </div>
+  </body>
+</html>
