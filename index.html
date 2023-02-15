@@ -13,7 +13,13 @@
       
       <div id="Tab1" class="tabcontent">
         <form>
-          <label for="name">Name:</label>
+          <label for="first_name">First Name:</label>
+          <input type="text" id="name" name="name">
+
+          <label for="second_name">Second Name:</label>
+          <input type="text" id="name" name="name">
+
+          <label for="last_name">Last Name:</label>
           <input type="text" id="name" name="name"><br><br>
     
           <label for="id">ID Number:</label>
@@ -48,8 +54,6 @@
       
       <div id="Tab2" class="tabcontent">
         <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name"><br><br>
           
           <label for="institution">Institution Name:</label>
           <input type="text" id="institution" name="institution"><br><br>
@@ -63,7 +67,17 @@
 			       <option value="diploma">Diploma</option>
 			       <option value="certificate">Certificate</option>
 		       </select><br><br>
-		
+		      
+
+           <label for="school_year">Year of Study:</label>
+		       <select id="school_year" name="school_year">
+			       <option value="1">First</option>
+			       <option value="2">Second</option>
+			       <option value="3">Third</option>
+             <option value="4">Forth</option>
+			       <option value="5">Fifth</option>
+			       <option value="6">Sixth</option>
+		       </select><br><br>
 	
           
           <input type="submit" value="Proceed">
@@ -71,8 +85,27 @@
       </div>
       
       <div id="Tab3" class="tabcontent">
-        <h3>Tab 3 Content</h3>
-        <p>This is the content of Tab 3.</p>
+        <form>
+          <label for="national-id">National ID:</label>
+          <input type="file" id="national-id" name="national-id"><br><br>
+          
+          <label for="school-intro-letter">School Introduction Letter:</label>
+          <input type="file" id="school-intro-letter" name="school-intro-letter"><br><br>
+          
+          <label for="cover-letter">Cover Letter:</label>
+          <input type="file" id="cover-letter" name="cover-letter"><br><br>
+
+          <label for="region">Preferred Region:</label>
+		      <select id="region" name="region">
+			       <option value="nairobi">Nairobi</option>
+			       <option value="mombasa">Mombasa</option>
+			       <option value="nakuru">Nakuru</option>
+             <option value="kisumu">Kisumu</option>
+			       <option value="eldoret">Eldoret</option>
+		       </select><br><br>
+          
+          <input type="submit" value="Upload">
+        </form>
       </div>
   </body>
 </html>
