@@ -12,3 +12,19 @@ function openTab(evt, tabName) {
     evt.currentTarget.classList.add("active");
   }
 
+  function handleSubmit(event, tab_number) {
+    event.preventDefault(); 
+  
+    const form = document.querySelector("#form1");
+    const formData = new FormData(form);
+    
+    const values = Object.fromEntries(formData.entries());
+ 
+    console.log(values);
+    
+    if (tab_number == 0) {
+      openTab(event, "Tab2")
+    }
+
+  }
+

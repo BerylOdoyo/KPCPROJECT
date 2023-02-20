@@ -17,15 +17,15 @@
       </div>
       
       <div id="Tab1" class="tabcontent">
-        <form>
-          <label for="first_name">First Name:</label>
-          <input type="text" id="name" name="name" required>
+        <form id="form1">
+          <label for="first_name" >First Name:</label>
+          <input type="text" id="name" name="first_name" required>
 
           <label for="second_name">Second Name:</label>
-          <input type="text" id="name" name="name">
+          <input type="text" id="name" name="second_name">
 
           <label for="last_name">Last Name:</label>
-          <input type="text" id="name" name="name" required><br><br>
+          <input type="text" id="name" name="third_name" required><br><br>
     
           <label for="id">ID Number/Passport:</label>
           <input type="text" id="id" name="id" required><br><br>
@@ -37,7 +37,7 @@
           <input type="email" id="email" name="email" required><br><br>
 
           <label for="dob">Date of Birth:</label>
-		      <input type="text" id="dob" name="dob" onfocus="(this.type='date')" onblur="(this.type='text')" required><br><br>
+		      <input type="text" id="dob" name="date_of_birth" onfocus="(this.type='date')" onblur="(this.type='text')" required><br><br>
           
           <label for="gender">Gender:</label>
 		      <select id="disability" name="gender">
@@ -47,13 +47,13 @@
 		       </select><br><br>
 
           <label for="disability">Disability:</label>
-		      <select id="disability" name="course-type">
+		      <select id="disability" name="disability">
 			       <option value="Yes">No</option>
 			       <option value="No">Yes</option>
 		       </select><br><br>
 
 
-          <input class="bodybutton" type="submit" value="Proceed">
+          <input class="bodybutton" type="submit" value="Proceed" onclick="handleSubmit(event, 0)">
         </form>
       </div>
       
@@ -117,6 +117,7 @@
       const firstTabContent = document.querySelector("#Tab1");
       firstTabButton.classList.add("active");
       firstTabContent.classList.add("show");
+
   </script>
   </body>
 </html>
