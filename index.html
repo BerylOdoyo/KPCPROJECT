@@ -5,8 +5,13 @@
     <script src="kpc.js"></script>
   </head>
   <body>
+    <header class="topheader">
+    </header>
+    <header class="midheader">
+      <img src="./images/kpc_maillogo.jpg">
+    </header>
     <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Tab1')">1. Personal Details</button>
+        <button id="default" class="tablinks" onclick="openTab(event, 'Tab1')">1. Personal Details</button>
         <button class="tablinks" onclick="openTab(event, 'Tab2')">2. Institution Details</button>
         <button class="tablinks" onclick="openTab(event, 'Tab3')">3. Documents Upload</button>
       </div>
@@ -14,25 +19,25 @@
       <div id="Tab1" class="tabcontent">
         <form>
           <label for="first_name">First Name:</label>
-          <input type="text" id="name" name="name">
+          <input type="text" id="name" name="name" required>
 
           <label for="second_name">Second Name:</label>
           <input type="text" id="name" name="name">
 
           <label for="last_name">Last Name:</label>
-          <input type="text" id="name" name="name"><br><br>
+          <input type="text" id="name" name="name" required><br><br>
     
-          <label for="id">ID Number:</label>
-          <input type="text" id="id" name="id"><br><br>
+          <label for="id">ID Number/Passport:</label>
+          <input type="text" id="id" name="id" required><br><br>
     
           <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone"><br><br>
+          <input type="tel" id="phone" name="phone" required><br><br>
     
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email"><br><br>
+          <input type="email" id="email" name="email" required><br><br>
 
           <label for="dob">Date of Birth:</label>
-		      <input type="text" id="dob" name="dob" onfocus="(this.type='date')" onblur="(this.type='text')"><br><br>
+		      <input type="text" id="dob" name="dob" onfocus="(this.type='date')" onblur="(this.type='text')" required><br><br>
           
           <label for="gender">Gender:</label>
 		      <select id="disability" name="gender">
@@ -43,12 +48,12 @@
 
           <label for="disability">Disability:</label>
 		      <select id="disability" name="course-type">
-			       <option value="Yes">Yes</option>
-			       <option value="No">No</option>
+			       <option value="Yes">No</option>
+			       <option value="No">Yes</option>
 		       </select><br><br>
 
 
-          <input type="submit" value="Proceed">
+          <input class="bodybutton" type="submit" value="Proceed">
         </form>
       </div>
       
@@ -80,7 +85,7 @@
 		       </select><br><br>
 	
           
-          <input type="submit" value="Proceed">
+          <input class="bodybutton" type="submit" value="Proceed">
         </form>
       </div>
       
@@ -104,8 +109,14 @@
 			       <option value="eldoret">Eldoret</option>
 		       </select><br><br>
           
-          <input type="submit" value="Upload">
+          <input class="bodybutton" type="submit" value="Upload">
         </form>
       </div>
+  <script>
+      const firstTabButton = document.querySelector(".tablinks");
+      const firstTabContent = document.querySelector("#Tab1");
+      firstTabButton.classList.add("active");
+      firstTabContent.classList.add("show");
+  </script>
   </body>
 </html>
